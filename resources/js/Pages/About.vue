@@ -1,18 +1,16 @@
 <template>
     <Layout>
-        Home {{ user }}
+        About
     </Layout>
 </template>
+
 <script>
 import Layout from '../Layout'
-
+console.log('oi');
 export default {
     components: { Layout },
-    props: {
-        user: String
-    }
 }
 </script>
-<style>
 
+<style>
 </style>
