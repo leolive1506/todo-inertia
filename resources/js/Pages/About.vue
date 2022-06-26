@@ -1,14 +1,17 @@
 <template>
     <Layout>
-        About
+        About {{ name }}
     </Layout>
 </template>
 
 <script>
 import Layout from '../Layout'
-console.log('oi');
+
 export default {
     components: { Layout },
+    props: {
+        name: String
+    }
 }
 </script>
 

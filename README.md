@@ -20,3 +20,10 @@ php artisan inertia:middleware
 art ui vue
 # art ui react
 ```
+
+# [Install ziggy](https://github.com/tighten/ziggy)
+- Para ter acesso as rotas laravel no js
+    - composer require tightenco/ziggy
+    - @routes
+    - app.js
+        .mixin({ methods: { route: window.route } })

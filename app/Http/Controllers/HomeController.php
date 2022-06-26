@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $users = User::paginate(1);
+        $users = User::paginate(3);
         return Inertia::render('Home', ['users' => $users]);
     }
 }

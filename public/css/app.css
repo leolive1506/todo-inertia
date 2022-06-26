@@ -10912,6 +10912,9 @@ video {
 .pt-8{
   padding-top: 2rem;
 }
+.pb-4{
+  padding-bottom: 1rem;
+}
 .pt-4{
   padding-top: 1rem;
 }
@@ -10920,9 +10923,6 @@ video {
 }
 .pl-1{
   padding-left: 0.25rem;
-}
-.pb-4{
-  padding-bottom: 1rem;
 }
 .text-center{
   text-align: center;

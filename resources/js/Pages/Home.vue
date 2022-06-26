@@ -1,4 +1,5 @@
 <template>
+    <nav><a :href="route('teste')">About</a></nav>
     <div class="bg-white shadow overflow-hidden sm:rounded-md mt-4">
         <ul role="list" class="divide-y divide-gray-200">
             <li v-for="user in users.data" :key="user.id">
@@ -7,7 +8,7 @@
                     <div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
                         <div class="truncate">
                         <div class="flex text-sm">
-                            <p class="font-medium text-indigo-600 truncate">{{ user.name }}</p>
+                            <p class="font-medium text-indigo-600 truncate">{{ `${user.id} . ${user.name}` }}</p>
                             <p class="ml-1 flex-shrink-0 font-normal text-gray-500">in Engineering</p>
                         </div>
                         <div class="mt-2 flex">
