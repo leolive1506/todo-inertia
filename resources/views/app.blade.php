@@ -10,6 +10,8 @@
     @inertiaHead
 </head>
 <body>
-    @inertia
+    <div class="container mx-auto">
+        @inertia
+    </div>
 </body>
 </html>
