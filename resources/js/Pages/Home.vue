@@ -1,7 +1,7 @@
 <template>
     <div class="bg-white shadow overflow-hidden sm:rounded-md mt-4">
         <ul role="list" class="divide-y divide-gray-200">
-            <li v-for="user in users" :key="user.id">
+            <li v-for="user in users.data" :key="user.id">
                 <a href="#" class="block hover:bg-gray-50">
                     <div class="px-4 py-4 flex items-center sm:px-6">
                     <div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
@@ -39,10 +39,16 @@
                 </a>
             </li>
         </ul>
+        <div class="pb-4">
+            <Pagination :data="users" />
+        </div>
     </div>
 </template>
 <script>
+import Pagination from '../Shared/Pagination.vue'
+
 export default {
+    components: { Pagination },
     props: {
         users: Object
     }
