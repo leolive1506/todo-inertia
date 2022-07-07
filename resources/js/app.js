@@ -1,7 +1,12 @@
-require('./bootstrap')
+import './bootstrap';
+
+import Alpine from 'alpinejs';
 import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
+
+window.Alpine = Alpine;
+Alpine.start();
 
 InertiaProgress.init()
 

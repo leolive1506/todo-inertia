@@ -7,11 +7,13 @@
     <title>BeerNews</title>
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
     @routes
-    <script src="{{ mix('/js/app.js') }}" defer></script>
+    <script src="{{ mix('js/manifest.js') }}" defer></script>
+    <script src="{{ mix('js/vendor.js') }}" defer></script>
+    <script src="{{ mix('js/app.js') }}" defer></script>
     @inertiaHead
 </head>
 <body>
-    <div class="container mx-auto">
+    <div>
         @inertia
     </div>
 </body>

@@ -15,8 +15,21 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
-// Route::get('/about', [HomeController::class, 'about']);
-Route::get('/teste', function () {
-    return Inertia::render('About', ['name' => 'função de teste']);
-})->name('teste');
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+    Route::get('/users', [HomeController::class, 'index']);
+    // Route::get('/about', [HomeController::class, 'about']);
+    Route::get('/teste', function () {
+        return Inertia::render('About', ['name' => 'função de teste']);
+    })->name('teste');
+});
+
+
+require __DIR__.'/auth.php';
